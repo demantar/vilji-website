@@ -1,4 +1,62 @@
 baseURL: "http://hugo-quickstart-template.netlify.com"
 languageCode: "en-us"
 title: "Netlify + Hugo Quickstart"
-theme: "netlify-basic"
+theme: "PaperMod"
+
+# PaperMod theme configuration
+params:
+  # Enable dark mode
+  defaultTheme: auto
+  
+  # Show reading time
+  ShowReadingTime: true
+  
+  # Show word count
+  ShowWordCount: true
+  
+  # Show table of contents
+  ShowToc: true
+  
+  # Enable search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  
+  # Social icons (optional)
+  socialIcons:
+    - name: github
+      url: "https://github.com/yourusername"
+    - name: twitter
+      url: "https://twitter.com/yourusername"
+    - name: linkedin
+      url: "https://linkedin.com/in/yourusername"
+
+# Menu configuration
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+
+# Taxonomies
+taxonomies:
+  tag: tags
+  category: categories
